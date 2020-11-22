@@ -25,7 +25,7 @@ export default function ContactList({title, contacts}) {
       <img src={Icon} alt="search" onClick={searchContact} width="32px" className="form-icon"/>
     </div>
     {/* end of single input */}
-    <Link to="#" alt="favoriter" className="btn btn-link">filtrera favoriter</Link>
+    <Link to="#" alt="favoriter" className="btn btn-link">filter favorites</Link>
       <div className="link-container">
       {contacts.map(item => {
         return <Contact key={item.id} {...item} />

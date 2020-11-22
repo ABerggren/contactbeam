@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav>
       <div className='nav-center'>
         <div className='nav-header'>
-          <img src={logo} className='logo' alt='logo' />
+          <a href="http://www.beamonpeople.se"><img src={logo} className='logo' alt='logo' /></a>
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>
