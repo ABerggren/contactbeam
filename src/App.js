@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // pages
 import Home from "./Pages/Home";
 import Contacts from "./Pages/Contacts";
+import ContactDetails from "./Pages/ContactDetails";
 import Error from "./Pages/Error";
 import About from "./Pages/About";
-import ContactDetails from "./Pages/ContactDetails";
 // components
 import Navbar from "./Components/Navbar";
 
@@ -26,7 +26,6 @@ export default function App() {
         <Route exact path="/contacts/:id">
           <ContactDetails />
         </Route>
-
         <Route path="*">
           <Error />
         </Route>

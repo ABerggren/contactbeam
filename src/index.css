@@ -199,6 +199,17 @@ Buttons
   text-align: center;
   color: white;
 }
+.btn-link {
+  color: white;
+  font-size: 12px;
+  background-color: var(--clr-grey-4);
+  width: 100%;
+  text-align: right;
+}
+.btn-link:hover {
+  color: black;
+  background-color: var(--clr-grey-9);
+}
 /*
 =============== 
 Navbar
@@ -314,12 +325,22 @@ Details
   color: black;
   font-size: 0.8rem;
   opacity: 100%;
+  border: none;
 }
 
 .close-button {
   position: absolute;
+  width: 32px;
+  height: 32px;
   top: 0px;
   right: 0px;
+}
+.starred-star {
+  position: relative;
+  width: 22;
+  height: 22px;
+  top: 4px;
+  right: -5px;
 }
 /* 
 ====== 
@@ -342,8 +363,10 @@ Error
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background-color: var(--clr-grey-6);
+  background-color: var(--clr-grey-8);
   border-radius: 10px;
+  border: none;
+  opacity: 90%;
 }
 
 .overlay {
@@ -352,17 +375,21 @@ Error
   left: 10px;
   right: 10px;
   bottom: 10px;
-  background-color: var(--clr-primary-1);
-  opacity: 30%;
+  background-color: var(--clr-grey-1);
+  opacity: 100%;
   border-radius: 10px;
+  border: none;
 }
 .modal .modal-content {
   position: fixed;
-  top: 50px;
-  left: 50px;
-  width: 80%;
-  height: 80%;
+  top: 30px;
+  left: 28px;
+  width: 90%;
+  height: 93%;
   color: black;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--clr-grey-8);
 }
 
 .display-block {

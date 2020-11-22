@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { ContactContext } from "../Context/Contacts";
 import ReactModal from "react-modal";
 import { useHistory } from "react-router-dom"
-import CloseBtn  from "../Assets/close.svg";
+import CloseBtn from "../Assets/close.svg";
+import Starred from "../Assets/star_border.svg";
 
 export default function ContactDetails() {
   const { id } = useParams();
@@ -13,15 +13,14 @@ export default function ContactDetails() {
   const [modal, setShowModal] = React.useState(true);
   const history = useHistory();
 
-    function handleOpenModal () {
-    setShowModal(true);
-  }
-  
   function handleCloseModal () {
     setShowModal(false);
     history.push('/contacts');
   }
 
+  if (typeof (window) !== 'undefined') {
+    ReactModal.setAppElement('body')
+  }
     return (
       <div>
         <ReactModal 
@@ -34,7 +33,7 @@ export default function ContactDetails() {
           <img src={CloseBtn} onClick={handleCloseModal} alt="close" className="close-button"/>
           <section className="details-page">
             <div className="details-container">
-              <h3>{contact.name}</h3>
+              <h3>{contact.name}<img src={Starred} alt="starred" className="starred-star"/></h3>
               <h3>{contact.email}</h3>
             </div>
           </section>
