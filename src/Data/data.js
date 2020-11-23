@@ -94,3 +94,11 @@ export const social = [
     icon: <FaLinkedin />,
   },
 ];
+
+export const favorites = [
+  {
+    "id": 1,
+    "name": "Roselyn Hahn",
+    "email": "roselyn.hahn@example.com"
+  }
+];

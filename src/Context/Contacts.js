@@ -1,5 +1,6 @@
 import React from 'react';
 import { contacts } from '../Data/data'
+import { favorites } from '../Data/data'
 
 export const ContactContext = React.createContext();
 
@@ -8,7 +9,7 @@ export const ContactContext = React.createContext();
 export default function Contacts({ children }) {
  
     return (
-        <ContactContext.Provider value={{contacts}}>
+        <ContactContext.Provider value={{contacts, favorites}}>
             {children}
         </ContactContext.Provider>
     )
