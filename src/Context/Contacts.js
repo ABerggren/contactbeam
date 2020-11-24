@@ -8,7 +8,7 @@ export const ContactContext = React.createContext();
 export default function Contacts({ children }) {
 
     return (
-        <ContactContext.Provider value={{ contacts, favorites }}>
+        <ContactContext.Provider value={{ contacts }}>
             {children}
         </ContactContext.Provider>
     )

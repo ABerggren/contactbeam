@@ -33,11 +33,6 @@ export default function ContactList({ title, contacts }) {
       }
    }
  
-  React.useEffect(() => {
-    // local storage
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
   return <section className="section">
     <h2 className="section-title">{title}</h2>
       {/* single input */}
@@ -47,7 +42,9 @@ export default function ContactList({ title, contacts }) {
         <img src={Icon} alt="search" onClick={searchContact} width="32px" className="form-icon"/>
     </div>
     {/* end of single input */}
-    <button className="btn btn-link" alt="favoriter"  onClick={filterFavorites}>{favofilter ? 'show all' : 'filter favorites'}</button>
+    
+    <button className="btn btn-link" alt="favoriter" onClick={filterFavorites}>{favofilter ? 'show all' : 'filter favorites'}</button>
+    
     {!favofilter &&
     <div className="link-container">
       {contacts.map(item => {
