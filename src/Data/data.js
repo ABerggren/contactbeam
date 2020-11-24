@@ -97,8 +97,8 @@ export const social = [
 
 export const favorites = [
   {
-    "id": 1,
-    "name": "Roselyn Hahn",
-    "email": "roselyn.hahn@example.com"
+    "id": 11,
+    "name": "Stacey Kozey",
+    "email": "stacey.kozey@example.com"
   }
 ];

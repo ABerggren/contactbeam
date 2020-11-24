@@ -7,12 +7,12 @@ import CloseBtn from "../Assets/close.svg";
 import Starred from "../Assets/star_border.svg";
 
 export default function ContactDetails() {
-  const { id } = useParams();
+  const { id, starred } = useParams();
   const { contacts } = React.useContext(ContactContext);
   const contact = contacts.find(item => item.id === parseInt(id));
   const [modal, setShowModal] = React.useState(true);
   const history = useHistory();
-
+  
   function handleCloseModal () {
     setShowModal(false);
     history.push('/contacts');
@@ -21,7 +21,8 @@ export default function ContactDetails() {
   if (typeof (window) !== 'undefined') {
     ReactModal.setAppElement('body')
   }
-    return (
+
+  return (
       <div>
         <ReactModal 
           isOpen={modal}
@@ -33,7 +34,7 @@ export default function ContactDetails() {
           <img src={CloseBtn} onClick={handleCloseModal} alt="close" className="close-button"/>
           <section className="details-page">
             <div className="details-container">
-              <h3>{contact.name}<img src={Starred} alt="starred" className="starred-star"/></h3>
+              <h3>{contact.name}{starred && <img src={Starred} alt="starred" className="starred-star" />}</h3>
               <h3>{contact.email}</h3>
             </div>
           </section>
